@@ -23,16 +23,7 @@ void drawScene(void)
 	glLoadIdentity();
 
 	// Modeling transformations.
-	glPushMatrix();
-	glTranslatef(0.0, 0.0, -15.0);
-	glTranslatef(0.0, 7.0, 0.0);
-	glRotatef(90.0, 1.0, 0.0, 0.0);
-	glScalef(2.0, 1.0, 1.0);
-	glColor4f(1.0f, 0.5f, 0.0f, 0.0f);
-	//glutWireCube(5.0); // Box.
-	//glutWireTeapot(5.0); // Teapot
-	glutSolidCylinder(2.0, 1.0, 10.0, 2.0);
-	glPopMatrix();
+	
 	//kaki kanan
 	glPushMatrix();
 	glColor3f(0.1f, 0.0f, 0.0f);
@@ -64,6 +55,16 @@ void drawScene(void)
 	glutSolidCylinder(0.7, 10.0, 10.0, 2.0);
 	glPopMatrix();
 	//glutWireTorus(5.0, 10.0, 10.0, 20.0);
+	glPushMatrix();
+	glTranslatef(0.0, 7.0, -15.0);
+	//glTranslatef(0.0, 7.0, 0.0);
+	glRotatef(90.0, 1.0, 0.0, 0.0);
+	glScalef(2.0, 1.0, 1.0);
+	glColor4f(1.0f, 0.5f, 0.0f, 0.0f);
+	//glutWireCube(5.0); // Box.
+	//glutWireTeapot(5.0); // Teapot
+	glutSolidCylinder(2.0, 1.0, 10.0, 2.0);
+	glPopMatrix();
 
 	glFlush();
 }
@@ -135,7 +136,7 @@ int main(int argc, char **argv)
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA);
 	glutInitWindowSize(500, 500);
 	glutInitWindowPosition(100, 100);
-	glutCreateWindow("box.cpp");
+	glutCreateWindow("Kursi.cpp");
 	glutDisplayFunc(drawScene);
 	glutReshapeFunc(resize);
 	glutKeyboardFunc(keyInput);
